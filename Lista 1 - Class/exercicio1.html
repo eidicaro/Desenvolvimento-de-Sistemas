@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class Produto{
+            nome;
+            preco;
+            qtde;
+
+            constructor(nome,preco, qtde){
+                this.nome = nome;
+                this.preco = preco;
+                this.qtde = qtde;
+
+            }
+
+            calcularTotal(){
+                return(this.preco * this.qtde + " Reais").toFixed(2)
+            }
+        }
+
+        let Produto1 = new Produto("bala", 0.5, 10)
+
+        console.log(`${Produto1.calcularTotal()}`)
+    </script>
+</body>
+</html>
