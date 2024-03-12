@@ -21,7 +21,7 @@
             }
 
             calcularLucroAnual(){
-                lucro =  this.receitaAnual - this.despezasAnuais
+                return(this.receitaAnual - this.despezasAnuais)
             }
 
             exibirRelatorio(){
@@ -31,8 +31,7 @@
 
         let Empresa1 = new Empresa("nestle", 100000000 , 20000)
 
-        co
-        console.log(`${Empresa1.exibirRelatorio()}`)
+        console.log(`${Empresa1.exibirRelatorio()} , lucro ${Empresa1.calcularLucroAnual()}`)
     </script>
 </body>
 </html>
