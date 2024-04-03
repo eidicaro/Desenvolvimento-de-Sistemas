@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class CalculadorFGTS {
+            salario;
+
+            constructor(salario){
+                this.salario = salario;
+            }
+
+            calcularFGTS(){
+                return(this.salario - (this.salario * 0.08))
+            }
+        }
+
+        let CalculadorFGTS1 = new CalculadorFGTS (1000)
+
+        console.log(`o salario com desconto de FGTS é: ${CalculadorFGTS1.calcularFGTS()}`)
+    </script>
+</body>
+</html>

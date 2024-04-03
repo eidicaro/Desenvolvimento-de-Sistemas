@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class Aluno{
+            nome;
+            sobrenome;
+            curso;
+            semestre;
+
+            constructor(nome, sobrenome, curso, semestre){
+                this.nome = nome;
+                this.curso = curso;
+                this.sobrenome = sobrenome;
+                this.semestre = semestre;
+            }
+
+            exibirInformações(){
+                return(" nome: " + this.nome + "/ sobrenome: " + this.sobrenome + "/ curso: " + this.curso + "/ semestre: " + this.semestre)
+            }
+        }
+
+        let Aluno1 = new Aluno("waldison", "junior","desenvolvimento de sistemas","6 semestres")
+
+        console.log(`${Aluno1.exibirInformações()}`)
+    </script>
+</body>
+</html>

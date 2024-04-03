@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class Aluno{
+            nome;
+            idade;
+            nota;
+
+            constructor(nome,idade,nota){
+                this.nome = nome;
+                this.idade = idade;
+                this.nota = nota;
+            }
+
+            verificarNota(){
+                if(this.nota >= 7){
+                    return("o aluno " + this.nome + " com " + this.idade + " anos está aprovado!!")
+                } else{
+                    return("o aluno " + this.nome + " com " + this.idade + " anos o aluno está reprovado :(")
+                }
+            }
+        }
+
+        let Aluno1 = new Aluno("waldison", 16, 7)
+
+        console.log(`${Aluno1.verificarNota()}`)
+    </script>
+</body>
+</html>

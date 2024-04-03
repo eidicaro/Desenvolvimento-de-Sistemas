@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class Carro{
+            marca;
+            modelo;
+            combustivel;     
+            // em litros
+            consumo;
+            // em km/l
+            percorrer;
+
+            constructor(marca,modelo,combustivel,consumo,){
+                this.marca = marca;
+                this.modelo = modelo;
+                this.combustivel = combustivel;
+                this.consumo = consumo;
+            }
+
+            abastecer(){
+                return(this.combustivel + 10)
+            }
+
+            dirigir(){
+                return(this.abastecer() - (200/this.consumo))
+            }
+
+            exibirEstado(){
+
+                return("marca " + this.marca + " / modelo: " + this.modelo  + " / combustivel inicial: " + this.combustivel + "L "+ " / combustivel abastecido: " + this.abastecer() + "L" + " / autonomia restante: " + this.dirigir() + "km")
+            }
+        }
+
+        let Carro1 = new Carro("mclarem", "mclarem senna", 100, 10)
+
+        console.log(`${Carro1.exibirEstado()}`)
+
+
+    </script>
+</body>
+</html>
