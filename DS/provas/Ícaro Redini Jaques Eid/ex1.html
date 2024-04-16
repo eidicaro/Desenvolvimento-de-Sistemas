@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class Livro{
+            titulo;
+            autor;
+            anoPublicacao;
+
+            constructor(titulo,autor,anoPublicacao){
+                this.titulo = titulo;
+                this.autor = autor;
+                this.anoPublicacao = anoPublicacao;
+            }
+
+            informacoesLivro(){
+                return("Titulo do livro: " + this.titulo + " / Autor do livro: " + this.autor + " / Ano de publicação: " + this.anoPublicacao)
+            }
+        }
+
+        let Livro1 = new Livro("harry potter","J.K Rollins","1995")
+
+        console.log(`${Livro1.informacoesLivro()}`)
+    </script>
+</body>
+</html>

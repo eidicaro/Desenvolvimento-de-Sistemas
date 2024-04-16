@@ -1,0 +1,107 @@
+*{
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* container é a parte toda do site, ouseja, engloba os três elementos e mexe disposição dos três elementos gerais (header, box, footer) */
+
+.container{
+    display: grid;
+    grid-template-areas: "j j" "i i" "h h";
+    /*                  header  box  footer  */
+    grid-template-rows: 10vh 80vh 10vh;
+    /*       altura     header box footer */
+    transition: 1s;
+    
+}
+
+/* header principal com duas divisões internas(header1 e header2), mexe com os dois headers independentemente dos outros elementos (box e footer) */
+
+header{
+    display: grid;
+    grid-template-areas: "a b";
+    grid-template-columns: 1fr 3fr;
+    grid-area: j;
+    transition: 1s;
+    
+}
+
+.header1{
+    background-color: #00bebe;
+    grid-area: a;
+}
+
+.header2{
+    background-color: #004e8d;
+    grid-area: b;
+}
+
+/* parte central do site, ou seja a caixa com os blocos pretos, mexe neles de forma independente dos outros elementos (header e footer) */
+
+.box{
+    width: 800px;
+    height: 400px;
+    background-color: #ee7ec9;
+    gap: 10px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 2fr 2fr 2fr;
+    grid-template-areas: "c e f" "d e g";
+    grid-area: i;
+    transition: 2s;
+
+}
+.box1{
+    background-color: #000;
+    grid-area: c;
+}
+.box2{
+    background-color: #000;
+    grid-area: d;
+}
+.box3{
+    background-color: #7e0000;
+    grid-area: e;
+}
+.box4{
+    background-color: #000;
+    grid-area: f;
+}
+.box5{
+    background-color: #000;
+    grid-area: g;
+}
+
+/* footer :) */
+
+footer{
+    background-color: #00ac56;
+    grid-area: h;
+}
+
+/* mobile */
+
+@media screen and (max-width: 600px) {
+    .container{
+        grid-template-areas: "j j" "i i" "h h";
+        grid-template-rows: 2fr 9fr 1fr;
+        transition: 1s;
+    }
+
+    header{
+        grid-template-areas: "b b" "a a";
+        grid-template-columns: 1fr 1fr;
+        transition: 1s;
+    }
+
+    .box{
+        grid-template-areas: "c c d" "f f g" "e e e";
+        gap: 10px;
+        grid-template-columns: 1fr 0fr 1fr;
+        height: 100%;
+        width: 100%;
+        transition: 1s;
+    }
+}

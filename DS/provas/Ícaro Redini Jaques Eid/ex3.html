@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        class Funcionario{
+
+            constructor(nome,cargo,salario){
+                this.nome = nome;
+                this.cargo = cargo;
+                this.salario = salario;
+            }
+
+            calcularINSS(){
+                if(this.salario <= 1100.00){
+                    return(this.salario * 0.075)
+                } else if(this.salario >= 1100.01 && this.salario <= 2203.48){
+                    return(this.salario * 0.09).toFixed(2)
+                } else if(this.salario >= 2203.49 && this.salario <= 3305.22){
+                    return(this.salario * 0.12).toFixed(2)
+                } else if(this.salario >= 3305.23 && this.salario <= 6433.57){
+                    return(this.salario * 0.14).toFixed(2)
+                } else if(this.salario >= 1100.01 && this.salario <= 2203.48){
+                    return(this.salario * 0.09).toFixed(2)
+                } else if(this.salario > 6433.57){
+                    return(this.salario - 751.99).toFixed(2)
+                }
+            }
+
+            
+
+        }
+
+        let Funcionario1 = new Funcionario("josé","programador junior", 5200)
+
+            let nome = "josé"
+            let cargo = "programador junior"
+            let salario = 5200
+
+        console.log(`nome: ${nome} / cargo: ${cargo} / salario: ${salario.toFixed(2)} / valor do desconto de INSS: ${Funcionario1.calcularINSS()}`)
+    </script>
+</body>
+</html>

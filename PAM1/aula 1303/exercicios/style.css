@@ -1,0 +1,32 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+}
+
+.container{
+    display: grid;
+    background-color: #960000;
+    gap: 15px;
+    grid-template-columns: 2fr 1fr;
+    grid-template-areas: "a b "
+                         "a c ";
+
+}
+
+.div1{
+    background-color: #e4cd00;
+    grid-area: a;
+}
+
+.div2{
+    background-color: #e4cd00;
+    grid-area: b;
+}
+
+.div3{
+    background-color: #e4cd00;
+    grid-area: c;
+}
